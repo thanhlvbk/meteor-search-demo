@@ -1,0 +1,27 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+accounts-base
+accounts-oauth
+accounts-ui
+accounts-password
+service-configuration
+observe-sequence
+reactive-var
+fastclick
+http
+launch-screen
+facts
+
+alanning:roles
+mrt:nprogress
+momentjs:moment
+meteorhacks:search-source
+twbs:bootstrap
+
+particle4dev:debugx
+particle4dev:sass
+

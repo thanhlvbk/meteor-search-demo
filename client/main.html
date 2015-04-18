@@ -1,0 +1,40 @@
+<head>
+    <title>site name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="/favicon.png" itemprop="image"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="shortcut icon" href="/favicon.png"/>
+</head>
+
+<body>
+    <div class="container">
+        <div id="heading">
+            <h1>Books Search</h1>
+        </div>
+        {{> searchBox }}
+        {{> searchResult}}
+    </div>
+</body>
+
+<template name="searchBox">
+    <input type="text" id="search-box" placeholder="search books here" />
+</template>
+
+<template name="searchResult">
+    <div id='search-result'>
+        <div id="search-meta">
+            {{#if isLoading}}
+                searching ...
+            {{/if}}
+        </div>
+
+        {{#each getBooks}}
+        <div class="books">
+            <h4 class="name">Book: {{{name}}}</h4>
+            <div class="author">
+                Author: {{{author}}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</template>
